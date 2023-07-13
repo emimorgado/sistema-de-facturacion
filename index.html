@@ -6,6 +6,105 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>istema de facturacion</h1>
+   </header>
+   <nav>
+       <ul>
+           <li><a href="">Inicio</a></li>
+           <li><a href="usuarios.html">Usuarios</a></li>
+           <li><a href="clientes.html">Clientes</a></li>
+           <li><a href="productos.html">Productos</a></li>
+           <li><a href="ventas.html">Ventas</a></li>
+       </ul>
+   </nav>
+
+   <main>
+       <section class="row">
+           <div class="col">
+               <div class="card">
+                   <div class="card-header">
+                       <h3 class="card-title">cabercera factura</h3>
+
+                   </div>
+                   <div class="card-body">
+                       <form class="row">
+                       
+                           <div class="form-group col md 4">
+                               <label for="">Razon social</label>
+                               <input type="text" class="form-control" placeholder="eje:0000" id="inputnombre">
+                           </div>
+                           <div class="form-group col md 4 ">
+                               <label for="">rif</label>
+                               <input type="text" class="form-control" placeholder="eje:000001">
+                           </div>
+                           <div class="form-group col md 8">
+                               <label for="">direccion</label>
+                               <input type="text" class="form-control">
+                           </div>
+                           <div class="form-group col md 8">
+                               <label for="">Fecha</label>
+                               <input type="text" class="form-control" inputmode="fecha">
+                           </div>
+                          
+                       </form>
+       
+                   </div>
+               </div>
+           </div>
+       </section>
+   </main>    
+       <section class="col">
+           <div class="row">
+               <div class="card-body">
+                 <form class="row">
+                   <div class="form-group col nd">
+                       <label for="">Codigo</label> 
+                       <input type="text">
+                   </div>
+                   <div class="form-group col nd">
+                       <label for="">Cantidad</label> 
+                       <input type="text">
+                   </div> 
+                   <div class="form-group col nd">
+                       <label for="">Descripcion</label> 
+                       <select id="selectProducto" class="form-control">
+                           <option value="0"></option>
+                           <option value="1">producto1</option>
+                           <option value="2">producto2</option>
+                           <option value="3">producto3</option>
+                           <option value="4">producto4</option>
+                       </select>
+                   </div>
+                   <div class="form-group col nd">
+                       <label for="">Precio unitario</label> 
+                       <input type="text">
+                   </div> 
+                   <div class="form-group col nd">
+                       <label for="">Total</label> 
+                       <input type="text">
+                   </div>
+                   <div class="form-group col nd contenedor-button">
+                       <button class="btn btn-primary">Agregar</button>
+                   </div>
+                                   
+                 </form>  
+               </div>
+           </div>
+
+       </section>
+               <table class="table">
+                   <tr>
+
+                       <td>Codigo</td>
+                   
+                       <td>Cantidad</td>
+                   
+                       <td>Descripcion</td>
+
+                       <td>Precio unitario</td>
+                   
+                     </tr>
+               </table>
 </body>
 </html>
