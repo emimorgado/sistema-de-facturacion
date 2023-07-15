@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página de inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Sistema de Facturación</h1>
+   </header>
+   <nav class="navegación">
+       <ul>
+           <li><a href="index.html">Inicio</a></li>
+           <li><a href="usuarios.html">Usuarios</a></li>
+           <li><a href="clientes.html">Clientes</a></li>
+           <li><a href="productos.html">Productos</a></li>
+           <li><a href="ventas.html">Ventas</a></li>
+           <li><a href="registro.html">Regístrate</a></li>
+           <button class="boton" aria-label="close" type="button">Cerrar Sesión
+           <span>&times;</span></button>
+       </ul>
+   </nav>
+
+   <main>
+       <section class="row">
+           <div class="col">
+               <div class="card">
+                   <div class="card-header">
+                       <h3 class="card-title">Cabecera factura</h3>
+
+                   </div>
+                   <div class="card-body">
+                       <form class="row">
+                       <fieldset>
+                        <legend>Obtén tu factura llenando todos los campos</legend>
+                           <div class="form-group col md 4">
+                               <label for="">Razón social</label>
+                               <input class="input-text" placeholder="Eje:0000" id="inputnombre">
+                           </div>
+                           <div class="form-group col md 4 ">
+                               <label for="">Rif</label>
+                               <input class="input-text" placeholder="Eje:000001">
+                           </div>
+                           <div class="form-group col md 8">
+                               <label for="">Dirección</label>
+                               <input class="input-text">
+                           </div>
+                           <div class="form-group col md 8">
+                               <label for="">Fecha</label>
+                               <input type="date" value="2023-07-14"/>
+                            </div>
+                        </form>
+                        </fieldset>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+   </main>    
+       <section class="col">
+           <div class="row">
+               <div class="card-body">
+                 <form class="row">
+                   <div class="form-group col nd">
+                       <label for="">Código</label> 
+                       <input type="text">
+                   </div>
+                   <div class="form-group col nd">
+                       <label for="">Cantidad</label> 
+                       <input type="text">
+                   </div> 
+                   <div class="form-group col nd">
+                       <label for="">Descripción</label> 
+                       <select id="selectProducto" class="form-control">
+                           <option value="1">Producto 1</option>
+                           <option value="2">Producto 2</option>
+                           <option value="3">Producto 3</option>
+                           <option value="4">Producto 4</option>
+                           <option value="4">Producto 5</option>
+                           <option value="4">Producto 6</option>
+                           <option value="4">Producto 7</option>
+                       </select>
+                   </div>
+                   <div class="campo">                      
+                   <label for="">Precio unitario</label> 
+                    <input type="dólar" value="$">
+                   </div> 
+                   <div class="campo">                       
+                   <label for="">Total</label> 
+                   <input type="dólar" value="$">
+                   </div>
+                   <div class="campo">                       
+                   </div>
+                   <button class="boton">Agregar</button>
+                 </form>  
+               </div>
+           </div>
+
+       </section>
+               <table class="table">
+                   <tr>
+                       <th>Código</th>
+                       <th>Cantidad</th>
+                       <th>Descripción</th>
+                       <th>Precio unitario</th>
+                    </tr>
+               </table>
+              <div> <button class="boton-factura">Facturar</button></div>
 </body>
 </html>
