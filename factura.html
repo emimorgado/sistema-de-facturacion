@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="img/locion.ico">
-    <link href="JavaScript.js">
-
+    <title>Document</title>
 </head>
 <body>
-
-   <nav class="navegación">
+    
+    <nav class="navegación">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="usuarios.html">Usuarios</a></li>
@@ -23,11 +20,22 @@
        </ul>
    </nav>
 
-    <main class="main">
-        <p class="parrafo-principal">Bienvenido a Beuty app, gracias por visitarnos si desea seguir con su facturacion, por favor presiona el boton"Facturar" </p>
-        
-            <a href="factura.html" class="botnCerrar color-a" type="submit">Facturar</a>
-        </main>
+   <div id="contenedor">
+    <div id="central">
+        <div id="login">
+            <div class="titulo">
+                Ingresa tus datos
+            </div>
+            <form id="loginform">
+                <label class="bold">Numero de cedula</label>
+                <input type="text" name="usuario" placeholder="Usuario" required>
+                
+                <button><a style="text-decoration: none;" href="/" type="submit" title="Ingresar" name="Ingresar">Iniciar Factura</a></button>
+            </form>
+        </div>
+    </div>
+</div>
 
+    
 </body>
 </html>
