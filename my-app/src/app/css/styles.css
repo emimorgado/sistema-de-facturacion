@@ -1,0 +1,227 @@
+/* Global */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: normal;
+    color: #000000;
+    margin: 0;
+    background-color: #d9b6e7;
+}
+
+/* Tipografía y color */
+h1 {
+    font-size: 3.8rem;
+    color: #000000;
+    text-align: center;
+}
+h3 {
+    font-size: 3rem;
+    color:#000000;
+    text-align: center;
+}
+/* Barra de Navegación */
+.navegación {
+    padding: 3rem;
+    background-color: #d9b6e7;
+}
+.navegación ul {
+    list-style-type: none;
+    text-align: center;
+}
+.navegación li {
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+.navegación li a {
+    color: #4f77b8;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+/* Botones */
+.boton {
+    background-color: #896996;
+    color:#4f77b8;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 20%;
+    text-align: center;
+    border: none;
+}
+
+.botnCerrar {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color:#4f77b8;
+    font-weight: bold;
+}
+
+ .boton-factura{
+    background-color: #896996;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 20%;
+    text-align: center;
+    border: none;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.boton-registro {
+    background-color: #896996;
+    color: #d9b6e7;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 50%;
+    text-align: center;
+    border: none;
+}
+
+/*Tablas*/
+table {
+    table-layout: fixed;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #925ba8;
+}
+  
+thead th:nth-child(1) {
+    width: 30%;
+}
+  
+thead th:nth-child(2) {
+    width: 20%;
+}
+  
+thead th:nth-child(3) {
+    width: 15%;
+}
+  
+thead th:nth-child(4) {
+    width: 35%;
+}
+  
+th, td {
+    padding: 20px;
+}
+legend {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--oscuro);
+}
+
+/* login */
+
+.bold {
+    font-size: 1.5rem;
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+#central {
+    max-width: 320px;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 250%;
+    color:#4f77b8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login {
+    width: 100%;
+    padding: 50px 30px;
+    background-color: #d9b6e7;
+    box-shadow: 0px 0px 5px 5px rgba(34, 133, 59, 0.15);
+    border-radius: 3px 3px 3px 3px;
+    
+    box-sizing: border-box;
+}
+
+#login input {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: #1b262c;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+    font-family: 'Overpass', sans-serif;
+    color: #E4E4E4;
+}
+
+#login button {
+    
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.5rem;
+    color:#000000;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #896996;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.main {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 15rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.color-a {
+    padding: 1rem;
+    background-color: #d9b6e7;
+    border-radius: 1.5rem;
+    font-size: 2rem;  
+}
