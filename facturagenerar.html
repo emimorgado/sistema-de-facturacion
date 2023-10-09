@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<div class="control-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-2-4">
+        <div class="slogan">Facturación </div>
+
+        <label for="config_tax">IVA:
+          <input type="checkbox" id="config_tax" />
+        </label>
+        <label for="config_tax_rate" class="taxrelated">Tasa:
+          <input type="text" id="config_tax_rate" value="16"/>%
+        </label>
+        <label for="config_note">Nota:
+          <input type="checkbox" id="config_note" />
+        </label>
+        
+      </div>
+      <div class="col-4 text-right">
+        <a href="javascript:window.print()">Imprimir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="row">
+  <div class="logoholder text-center" >
+    <img src="img/logo.png">
+  </div>
+
+  <div class="me">
+    <p contenteditable>
+      <strong>Beauty App.</strong><br>
+      Caracas, Venezuela.<br>
+    </p>
+  </div>
+
+  <div class="info">
+    <p contenteditable>
+      Web: <a href="http://volkerotto.net">www.sistemasweb.la</a><br>
+      E-mail: <a href="mailto:emilymorgado1205@gmail.com">emilymorgado1205@gmail.com</a><br>
+      Tel: 0212 872 3780<br>
+    </p>
+  </div>
+
+  <div class="bank">
+    <p contenteditable>
+      Nombre del comprador: <br>
+      Cédula: <br>
+      Teléfono: <br>
+    </p>
+  </div>
+
+</header>
+
+<div class="row section">
+
+	<div class="col-2">
+    <h1 contenteditable>Factura</h1>
+  </div>
+
+  <div class="col-2 text-right details">
+    <p contenteditable>
+      Fecha: <input type="text" class="datePicker" /><br>
+      Factura Nro: <input type="text" value="100" /><br>
+    </p>
+  </div>
+  
+  <div class="col-2">
+
+    <p contenteditable class="client">
+      <strong>Facturar a</strong><br>
+      [Nombre cliente]<br>
+	    [Dirección cliente]<br>
+	    [Tlf cliente]
+    </p>
+  </div>
+  
+  <div class="col-2">
+    
+    <strong>Enviar a</strong><br>
+    <p contenteditable class="client">
+      [Nombre cliente]<br>
+	    [Dirección cliente]<br>
+	    [Tlf cliente]
+    </p>
+  </div>
+
+</div>
+
+<div class="row section" style="margin-top:-1rem">
+<div class="col-1">
+	<table style='width:100%'>
+    <thead contenteditable>
+	<tr class="invoice_detail">
+      <th width="25%" style="text-align: center;">Vendedor</th>
+       <th width="25%">Orden de compra </th>
+      <th width="20%">Retirado por</th>
+      <th width="30%">Términos y condiciones</th>
+	 </tr> 
+    </thead>
+    <tbody contenteditable>
+	<tr class="invoice_detail">
+      <td width="25%" style="text-align:center">Emily y Lucia</td>
+       <td width="25%">#00000 </td>
+      <td width="20%">Nombre cliente</td>
+      <td width="30%">Pago al contado</td>
+	 </tr>
+	</tbody>
+	</table>
+</div>
+
+</div>
+
+<div class="invoicelist-body">
+  <table>
+    <thead contenteditable>
+      <th width="5%">Código</th>
+      <th width="60%">Descripción</th>
+      
+      <th width="10%">Cant.</th>
+      <th width="15%">Precio</th>
+      <th class="taxrelated">IVA</th>
+      <th width="10%">Total</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td width='5%'><a class="control removeRow" href="#">x</a> <span contenteditable>12345</span></td>
+        <td width='60%'><span contenteditable>Descripción</span></td>
+        <td class="amount"><input type="text" value="1"/></td>
+        <td class="rate"><input type="text" value="0.00" /></td>
+        <td class="tax taxrelated"></td>
+        <td class="sum"></td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="control newRow" href="#">+ Nueva fila</a>
+</div>
+
+<div class="invoicelist-footer">
+  <table contenteditable>
+    <tr class="taxrelated">
+      <td>IVA:</td>
+      <td id="total_tax"></td>
+    </tr>
+    <tr>
+      <td><strong>Total:</strong></td>
+      <td id="total_price"></td>
+    </tr>
+  </table>
+</div>
+
+<div class="note" contenteditable>
+  <h2>Nota:</h2>
+</div>
+
+<footer class="row">
+  <div class="col-1 text-center">
+    <p class="notaxrelated" contenteditable>El monto de la factura no incluye el impuesto sobre las ventas.</p>
+    
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="js/javascript.js"></script>
+</body>
+</html>
