@@ -12,44 +12,53 @@
    <nav class="navegación">
     <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="usuarios.html">Usuarios</a></li>
         <li><a href="clientes.html">Clientes</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="ventas.html">Ventas</a></li>
         <a class="botnCerrar" href="login.html" type="button">Cerrar Sesión</a>
    </ul>
 </nav>
-<div class="contenedor">
-    <input type="text" placeholder="Buscar cliente..." >
-</div>
+
 <table class="table">
     <tr>
-        <th>Cedula/ rif</th>
         <th>Nombre/Empresa</th>
-        <th>Dirrecion</th>
+        <th>Usuario</th>
+        <th>Cedula/Rif</th>
+        <th>Direccion</th>
+        <th>Correo Electronico</th>
+        <th>Numero Telefonico</th>
+        <th>Eliminar</th>
+        <th>Editar</th>
     </tr>
         <tr>
-            <th>30699546</th>
             <td>Emily Morgado</td>
+            <td>EmilyM</td>
+            <td>30.699.955</td>
             <td>Propatria</td>
-            <td><button class="boton-tabla">Editar</button>
-                <button class="boton-tabla">Eliminar</button>
-            </td>
+            <td>emilymorgado</td>
+            <td>0414 152 6120</td>
+            <td><button>Editar</button></td>
+            <td><button>Eliminar</button>
         </tr>
+
         <tr>
-            <td>30871648</td>
             <td>Lucia Spina</td>
-            <td>Gato egro</td>
-            <td><button class="boton-tabla">Editar</button>
-                <button class="boton-tabla">Eliminar</button>
-            </td>
+            <td>luciaS</td>
+            <td>30871648</td>
+            <td>Gato Negro</td>
+            <td>luciaspina</td>
+            <td>0414 152 6120</td>
+            <td><button>Editar</button></td>
+            <td><button>Eliminar</button>
         </tr>
-        <tr>
-            <td>123456</td>
-            <td>Gabriela Key</td>
-            <td>Agua salud</td>
-            <td><button class="boton-tabla">Editar</button>
-                <button class="boton-tabla">Eliminar</button></td>
-        </tr>
+
+        <form action class="boton-busqueda" method="post" target="_blank">
+
+            <p class="boton-busqueda">
+                <input type="search" name="busquedacliente" placeholder="Nombre">
+                <input type="submit" value="Buscar">
+            </p>
+          
+          </form>
 </body>
 </html>
