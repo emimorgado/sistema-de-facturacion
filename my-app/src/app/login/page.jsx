@@ -17,7 +17,7 @@ export default function Login() {
                     <label class="bold" for="">Contraseña</label>
                     <input type="password" placeholder="Contraseña" name="password" required/>
                     
-                    <button><a style="text-decoration: none;" href="index.html" type="submit" title="Ingresar" name="Ingresar">Iniciar Sesion</a></button>
+                    <button><a href="index.html" type="submit" title="Ingresar" name="Ingresar">Iniciar Sesion</a></button>
             </div>
         </div>
     </div>

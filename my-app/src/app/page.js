@@ -1,10 +1,11 @@
-import Image from 'next/image'
-import '../css/styles.css';
+import Image from 'next/image';
+import './css/styles.css';
 
-export default function Login() {
+export default function Home() {
  return (
     <>
-     <nav class="navegación">
+
+      <nav class="navegación">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="clientes.html">Clientes</a></li>
