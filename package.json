@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "faker": "^6.6.6",
+    "blerg": "^0.0.3",
+    "faker": "^5.5.3",
     "json": "^11.0.0",
     "lodash": "^4.17.21"
   },
@@ -8,7 +9,6 @@
   "version": "1.0.0",
   "description": "Código JavaScript",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
