@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+    <!-- Estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="css/css.css" rel="stylesheet">
+    <script src="js/factura.js"></script>
+</head>
+    <button class="boton-atras" onclick="goBack()">Volver atrás</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="img/logo.png" id="logo">
+            </div>
+            <div class="col-md-10">
+                <p id="empresa">Beauty App</p>
+                <p>Dirección: Av. Principal 123</p>
+                <p>Teléfono: (0212) 870 3333</p>
+                <p>Email: beautyapp@gmail.com</p>
+            </div>
+        </div>
+
+        <form id="formulario-cliente">
+            <div class="form-row" id="datos-cliente">
+                <div class="form-group col-md-6">
+                    <label for="nombre-cliente">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre-cliente" name="nombre-cliente" placeholder="Ingrese el nombre del cliente" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email-cliente">Email:</label>
+                    <input type="email" class="form-control" id="email-cliente" name="email-cliente" placeholder="Ingrese el email del cliente" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telefono-cliente">Teléfono:</label>
+                    <input type="tel" class="form-control" id="telefono-cliente" name="telefono-cliente" placeholder="Ingrese el teléfono del cliente" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="direccion-cliente">Dirección:</label>
+                    <input type="text" class="form-control" id="direccion-cliente" name="direccion-cliente" placeholder="Ingrese la direccion del cliente">
+                </div>
+                
+                <table class="table table-bordered table-hover" id="tabla-productos">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="botones">
+                    <button type="button" onclick="verFactura()">Ver factura</button>
+                  </div>
+
+                  <div id="botones">
+                    <button type="button" onclick="agregarProducto()">Agregar Productos</button>
+                  </div>
+</body>
+</html>
