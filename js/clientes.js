@@ -3,10 +3,10 @@
     const buscador = document.getElementById("buscador-clientes");
     const formulario = document.getElementById("formulario-clientes");
   
-    // Crear una variable para almacenar los datos de los clientes
+    // variable para almacenar los datos de los clientes
     let clientes = [];
   
-    // Crear una función para mostrar los clientes en la tabla
+    // función para mostrar los clientes en la tabla
     function mostrarClientes(clientes) {
       const tbody = tabla.getElementsByTagName("tbody")[0];
       tbody.innerHTML = "";
@@ -23,7 +23,7 @@
       }
     }
   
-    // Crear una función para filtrar los clientes por nombre
+    // función para filtrar los clientes por nombre
     function filtrarClientes() {
       const texto = buscador.value.toLowerCase();
       const clientesFiltrados = clientes.filter((cliente) => {
@@ -32,10 +32,10 @@
       mostrarClientes(clientesFiltrados);
     }
   
-    // Añadir un evento al buscador para filtrar los clientes al escribir
+    // filtrar los clientes al escribir
     buscador.addEventListener("input", filtrarClientes);
   
-    // Añadir un evento al formulario para agregar nuevos clientes al enviar
+    //  agregar nuevos clientes al enviar
     formulario.addEventListener("submit", (e) => {
       e.preventDefault();
   
@@ -50,19 +50,7 @@
       formulario.reset();
     });
   
-    // Obtener los datos de los clientes desde una API ficticia
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        clientes = data;
-        mostrarClientes(clientes);
-      })
-      .catch((error) => {
-        console.error(error);
-        alert("No se pudieron obtener los datos de los clientes");
-      });
-  
-    // Función para agregar un nuevo cliente al array y a la tabla
+    // agregar un nuevo cliente al array y a la tabla
     function agregarCliente(cliente) {
       const existe = clientes.some((c) => c.id === cliente.id);
   
