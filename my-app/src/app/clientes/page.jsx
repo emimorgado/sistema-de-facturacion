@@ -1,8 +1,27 @@
 import Image from 'next/image'
 import '../css/styles.css';
+import { useEffect, useState } from 'react';
 
-export default function Productos() {
- return (
+export default function ClientesPage() {
+  const [clientes, setClientes] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch('/api/clientes');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.results) {
+            setClientes(data.results);
+          }
+        }
+      } catch (error) {
+        console.error('Error al obtener datos de clientes:', error);
+      }
+    })();
+  }, []);
+ 
+  return (
     <>
     <nav class="navegación">
     <ul>
@@ -13,46 +32,29 @@ export default function Productos() {
         <a class="botnCerrar" href="login.html" type="button">Cerrar Sesión</a>
    </ul>
 </nav>
-<form action class="boton-busqueda" method="post" target="_blank"/>
-
-    <p class="boton-busqueda"/>
-      <input type="search" name="busquedadcliente" placeholder="Clientes"/>
-      <input type="submit" value="Buscar"/>
-  
-
-<table class="table">
-    <tr>
-        <th>Nombre/Empresa</th>
-        <th>Usuario</th>
-        <th>Cedula/Rif</th>
-        <th>Direccion</th>
-        <th>Numero Telefonico</th>
-        <th>Eliminar</th>
-        <th>Editar</th>
-    </tr>
-        <tr>
-            <td>Emily Morgado</td>
-            <td>EmilyM</td>
-            <td>30.699.955</td>
-            <td>Propatria</td>
-            <td>0414 152 6120</td>
-            <td><button>Editar</button></td>
-            <td><button>Eliminar</button></td>
-        </tr>
-
-        <tr>
-            <td>Lucia Spina</td>
-            <td>luciaS</td>
-            <td>30871648</td>
-            <td>Gato Negro</td>
-            <td>0414 152 6120</td>
-            <td><button>Editar</button></td>
-            <td><button>Eliminar</button></td>
-        </tr>
+<p class="p-p">Buscar por nombre: <input id="buscador-clientes" type="text"/></p>
+<table id="tabla-clientes">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Teléfono</th>
+  </tr>
+  <tbody></tbody>
 </table>
-        <div class="div-boton">
-            <a class="boton-producto" href="agregarcliente.html">Agregar cliente</a>
-          </div>
-    </>
- )
+<form class="padding-formulario" id="formulario-clientes">
+  <label for="id">ID:</label>
+  <input id="id" type="number" required/>
+  <label for="name">Nombre:</label>
+  <input id="name" type="text" required/>
+  <label for="email">Email:</label>
+  <input id="email" type="email" required/>
+  <label for="phone">Teléfono:</label>
+  <input id="phone" type="tel" required/>
+  <button type="submit">Agregar cliente</button>
+</form>
+
+<script src="js/clientes.js"></script>
+</>
+  );
 }
